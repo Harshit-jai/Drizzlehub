@@ -23,8 +23,8 @@ Sky-Update is a weather application built using React. It allows users to search
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/sky-update.git
-   cd sky-update
+   git clone https://github.com/avinashsingh108/WeatherCheck
+   cd WeatherCheck
 2. Install the dependencies:
    ```bash
    npm install
@@ -41,9 +41,9 @@ Sky-Update is a weather application built using React. It allows users to search
 If you want to contribute to Sky-Update, please follow these steps:
 
 1. Fork the repository.
-2. Create a new branch (git checkout -b feature-branch).
-3. Make your changes and commit them (git commit -m 'Add some feature').
-4. Push to the branch (git push origin feature-branch).
+2. Create a new branch **(git checkout -b feature-branch)**.
+3. Make your changes and commit them **(git commit -m 'Add some feature')**.
+4. Push to the branch **(git push origin feature-branch)**.
 5. Open a pull request.
 
 

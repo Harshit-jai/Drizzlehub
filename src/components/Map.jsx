@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import 'leaflet/dist/leaflet.css';
+import L from 'leaflet';
 import {
   MapContainer,
   TileLayer,
@@ -8,20 +9,20 @@ import {
   useMap,
   useMapEvents,
 } from "react-leaflet";
-import "leaflet/dist/leaflet.css";
 import { useWeather } from "../hooks/useWeather";
 
 function Map() {
   const { lat, lon, weatherData, getWeather } = useWeather();
   const [mapCenter, setMapCenter] = useState([lat, lon]);
-  
-  const capitalize = (string) => {
-    return string.charAt(0).toUpperCase() + string.slice(1);
-  };
-  
+
   useEffect(() => {
     setMapCenter([lat, lon]);
   }, [lat, lon]);
+
+  useEffect(() => {
+    // Set the path for Leaflet icons
+    L.Icon.Default.imagePath = '/leaflet/images/';
+  }, []);
 
   function ChangeMapView({ center }) {
     const map = useMap();
@@ -64,7 +65,7 @@ function Map() {
               {weatherData.sys.country || "No Data"}
               <br />
               <span className="flex text-base">
-                {capitalize(weatherData.weather[0].description)}{" "}
+                {weatherData.weather[0].description}{" "}
                 <img src={iconUrl} className="w-8" alt="weather icon" />
               </span>
             </div>

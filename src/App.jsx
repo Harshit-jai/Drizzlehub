@@ -68,7 +68,7 @@ const App = () => {
           </div>
         </div>
         {modalOpen && (
-          <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 px-4">
             <div className="bg-white p-6 rounded-lg shadow-lg">
               <h2 className="text-3xl mb-2">Enter a location:</h2>
               <input

@@ -12,7 +12,7 @@ const Weather = () => {
   const day = dateTime.toFormat("cccc");
   const clouds = weatherData.clouds.all;
   const weather = weatherData.weather[0];
-  const iconUrl = `http://openweathermap.org/img/wn/${weather.icon}@2x.png`;
+  const iconUrl = `https://openweathermap.org/img/wn/${weather.icon}@2x.png`;
   const tempCel = Math.trunc(weatherData.main.temp - 273.15);
   const tempFah = Math.trunc((weatherData.main.temp - 273.15) * 1.8 + 32);
   const tempFeelCel = Math.trunc(weatherData.main.feels_like - 273.15);

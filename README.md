@@ -1,8 +1,27 @@
-# React + Vite
+# Sky-Update
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Sky-Update is a weather application built using React. It allows users to search for weather information by location, view the forecast for the next 24 hours or 5 days, and get detailed weather metrics including temperature, humidity, wind speed, and air quality index (AQI).
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Search Weather by Location**: Users can search for weather information by entering a place name.
+- **Current Location Weather**: Fetches and displays weather information for the user's current location.
+- **24-Hour and 5-Day Forecast**: Switch between a detailed 24-hour forecast and a summarized 5-day forecast.
+- **Weather Metrics**: Displays temperature, humidity, wind speed, AQI, and other weather-related metrics.
+- **Social Media Links**: Includes links to relevant social media profiles.
+
+## Technologies Used
+
+- **React**: JavaScript library for building user interfaces.
+- **Tailwind CSS**: Utility-first CSS framework for styling.
+- **Luxon**: Library for working with dates and times.
+- **React Icons**: Library for including icons in React projects.
+- **Geolocation API**: For fetching the user's current location.
+- **OpenWeatherMap API**: For fetching weather data.
+
+## Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/sky-update.git
+   cd sky-update

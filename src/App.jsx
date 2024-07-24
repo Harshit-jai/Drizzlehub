@@ -46,8 +46,8 @@ const App = () => {
   return (
     <>
       <div className="">
-        <div className="flex flex-col lg:flex-row bg-slate-400 px-2 lg:px-20 py-4 min-h-screen ">
-          <div className="flex flex-col w-full lg:w-1/4 px-6 lg:px-10 py-6 bg-white rounded-t-3xl lg:rounded-r-none  lg:rounded-l-3xl lg:shadow-xl lg:z-50">
+        <div className="flex flex-col lg:flex-row dark:bg-black dark:text-white bg-slate-400 px-2 lg:px-20 py-4 min-h-screen ">
+          <div className="flex flex-col w-full lg:w-1/4 px-6 lg:px-10 py-6 dark:bg-gray-900 bg-white rounded-t-3xl lg:rounded-r-none  lg:rounded-l-3xl lg:shadow-xl lg:z-50">
             <div className="h-12">
               <SearchBar />
             </div>
@@ -58,7 +58,7 @@ const App = () => {
               <SocialLinks />
             </div>
           </div>
-          <div className="bg-slate-200 w-full lg:w-3/4 py-6 px-4 lg:px-10 rounded-b-3xl lg:rounded-l-none lg:rounded-r-3xl flex flex-col gap-y-8">
+          <div className="dark:bg-gray-800 bg-slate-200 w-full lg:w-3/4 py-6 px-4 lg:px-10 rounded-b-3xl lg:rounded-l-none lg:rounded-r-3xl flex flex-col gap-y-8">
             <div className="h-1/3">
               <Forecast />
             </div>

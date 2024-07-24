@@ -78,7 +78,7 @@ const SearchBar = () => {
     <div className="flex flex-col">
       <div className="flex items-center gap-1">
         <input
-          className=" w-full rounded-full pt-1 px-4 border-2 border-black text-xl placeholder:text-gray-600"
+          className=" w-full rounded-full pt-1 px-4 border-2 dark:text-gray-900 outline-none border-black text-xl placeholder:text-gray-600"
           placeholder="Search for places..."
           type="text"
           value={place}
@@ -97,7 +97,7 @@ const SearchBar = () => {
         </button>
       </div>
       {errorMessage && (
-        <div className="bg-red-200 text-red-800 px-2 py-0.5 mt-1 rounded-md border border-red-200 leading-5">
+        <div className="bg-red-200 text-red-800 px-2 py-0.5 mt-1 rounded-md border border-red-200 leading-5 z-50">
           {errorMessage}
         </div>
       )}

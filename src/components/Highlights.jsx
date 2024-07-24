@@ -60,8 +60,8 @@ const Highlights = () => {
       <h1 className="text-3xl font-semibold mb-5">Today's Highlights</h1>
 
       <div className="flex flex-col xl:grid grid-cols-4 grid-rows-2 gap-4 lg:h-80 overflow-y-auto ">
-        <div className="bg-white rounded-3xl p-2 flex flex-col items-center shadow-lg hover:shadow-2xl">
-          <h1 className="text-lg text-gray-500 font-normal">
+        <div className="bg-white dark:bg-slate-900 rounded-3xl p-2 flex flex-col items-center shadow-lg hover:shadow-2xl">
+          <h1 className="text-lg text-gray-500 dark:text-white font-normal">
             Sunrise/Sunset
           </h1>
           <div className="flex text-2xl gap-x-4">
@@ -75,18 +75,18 @@ const Highlights = () => {
             </p>
           </div>
         </div>
-        <div className="bg-white rounded-3xl p-2 shadow-lg hover:shadow-2xl flex flex-col w-full">
+        <div className="bg-white dark:bg-slate-900 rounded-3xl p-2 shadow-lg hover:shadow-2xl flex flex-col w-full">
           <Aqi aqi={aqi} />
         </div>
-        <div className="bg-white rounded-3xl p-2 flex flex-col items-center shadow-lg hover:shadow-2xl">
-          <h1 className="text-lg text-gray-500 font-normal">Humidity</h1>
+        <div className="bg-white dark:bg-slate-900 rounded-3xl p-2 flex flex-col items-center shadow-lg hover:shadow-2xl">
+          <h1 className="text-lg text-gray-500 dark:text-white font-normal">Humidity</h1>
           <div className="flex flex-col items-center">
             <WiHumidity className="text-blue-400 text-7xl" />{" "}
             <p className="text-2xl">{humidity}%</p>
           </div>
         </div>
-        <div className="col-start-1 row-start-2 bg-white rounded-3xl flex flex-col items-center p-2 shadow-lg hover:shadow-2xl">
-          <h1 className="text-lg text-gray-500 font-normal">Max/Min Temp</h1>
+        <div className="col-start-1 row-start-2 bg-white dark:bg-slate-900 rounded-3xl flex flex-col items-center p-2 shadow-lg hover:shadow-2xl">
+          <h1 className="text-lg text-gray-500 dark:text-white font-normal">Max/Min Temp</h1>
           <div className="flex text-2xl gap-x-4 gap-y-5 mt-3">
             <p className="flex flex-col items-center">
               <FaTemperatureHigh className="text-red-400 text-6xl" />{" "}
@@ -109,21 +109,21 @@ const Highlights = () => {
             )}
           </div>
         </div>
-        <div className="col-start-2 row-start-2 bg-white rounded-3xl p-2 shadow-lg hover:shadow-2xl flex flex-col items-center">
-          <h1 className="text-lg text-gray-500 font-normal">Wind Status</h1>
+        <div className="col-start-2 row-start-2 bg-white dark:bg-slate-900 rounded-3xl p-2 shadow-lg hover:shadow-2xl flex flex-col items-center">
+          <h1 className="text-lg text-gray-500 dark:text-white font-normal">Wind Status</h1>
           <div className="flex flex-col items-center">
             <FaWind className="text-blue-400 text-7xl" />{" "}
             <p className="text-2xl">{windSpeed} km/h</p>
           </div>
         </div>
-        <div className="col-start-3 row-start-2 bg-white rounded-3xl p-2 shadow-lg hover:shadow-2xl flex flex-col items-center">
-        <h1 className="text-lg text-gray-500 font-normal">Visibility</h1>
+        <div className="col-start-3 row-start-2 bg-white dark:bg-slate-900 rounded-3xl p-2 shadow-lg hover:shadow-2xl flex flex-col items-center">
+        <h1 className="text-lg text-gray-500 dark:text-white font-normal">Visibility</h1>
           <div className="flex flex-col items-center">
             <IoMdEye className="text-amber-400 text-7xl" />{" "}
             <p className="text-2xl">{visibility} km</p>
           </div>
         </div>
-        <div className="row-span-2 col-start-4 row-start-1 bg-white rounded-3xl shadow-lg hover:shadow-2xl">
+        <div className="row-span-2 col-start-4 row-start-1 bg-white dark:bg-slate-900 rounded-3xl shadow-lg hover:shadow-2xl">
           <Map/>
         </div>
       </div>

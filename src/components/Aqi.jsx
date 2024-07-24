@@ -16,11 +16,11 @@ const Aqi = ({ aqi }) => {
 
   return (
     <div className="flex flex-col gap-y-1.5">
-      <div className="text-lg text-gray-500 font-normal text-center">
+      <div className="text-lg text-gray-500 dark:text-white font-normal text-center">
         Air Quality
       </div>
       <h1 className="text-center text-2xl">
-        AQI: {aqi} <span className="text-sm text-gray-400">(Range 1-5)</span>
+        AQI: {aqi} <span className="text-sm text-gray-400 dark:text-white">(Range 1-5)</span>
       </h1>
       <div style={{ width: "100%", textAlign: "center", position: "relative" }}>
         <div className="mx-auto"

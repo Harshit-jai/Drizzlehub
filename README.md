@@ -1,4 +1,4 @@
-# Sky-Update
+# Sky-Update [Live Website](https://main--sky-update.netlify.app/)
 
 Sky-Update is a weather application built using React. It allows users to search for weather information by location, view the forecast for the next 24 hours or 5 days, and get detailed weather metrics including temperature, humidity, wind speed, and air quality index (AQI).
 

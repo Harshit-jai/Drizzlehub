@@ -3,8 +3,7 @@ import { useWeather } from "../hooks/useWeather";
 import { DateTime } from "luxon";
 import { WiHumidity } from "react-icons/wi";
 import { FaWind } from "react-icons/fa";
-import { FaTemperatureHigh } from "react-icons/fa";
-import { FaTemperatureLow } from "react-icons/fa";
+
 const Forecast = () => {
   const { fiveDayForecast, tempType, setTempType } = useWeather();
   const [formatType, setFormatType] = useState(true);
@@ -18,8 +17,8 @@ const Forecast = () => {
   return (
     <div>
       <div className="flex justify-between mb-3">
-        <h1 className="text-3xl w-1/6 font-semibold">Forecast</h1>
-        <div className="flex justify-start w-4/6 text-xl gap-4">
+        <h1 className="text-2xl lg:text-3xl w-2/6 lg:w-1/6 font-semibold">Forecast</h1>
+        <div className="flex justify-start w-3/6 lg:w-4/6 text-base lg:text-xl gap-2 lg:gap-4">
           <button
             onClick={() => setFormatType(true)}
             className={`${
@@ -41,7 +40,7 @@ const Forecast = () => {
             5 Days
           </button>
         </div>
-        <div className="w-1/6 flex justify-end gap-4 text-xl items-center font-semibold ">
+        <div className="w-1/6 flex justify-end gap-4 text-base lg:text-xl items-center font-semibold ">
           <p
             onClick={() => setTempType(true)}
             className={`${
@@ -60,7 +59,7 @@ const Forecast = () => {
           </p>
         </div>
       </div>
-      <div className="flex gap-4">
+      <div className="flex flex-wrap gap-4 w-full">
         {(formatType ? twentyFourForecast : totalForecast).map((day, index) => {
           const timestamp = day.dt;
           const dateTime = DateTime.fromSeconds(timestamp);
@@ -71,21 +70,12 @@ const Forecast = () => {
           const tempFah = Math.trunc((day.main.temp - 273.15) * 1.8 + 32);
           const humidity = day.main.humidity;
           const wind = day.wind.speed.toFixed(1);
-          const tempMaxCel = Math.trunc(day.main.temp_max - 273.15);
-          const tempMinCel = Math.trunc(day.main.temp_min - 273.15);
           const desc = day.weather[0].description
-
-          const tempMaxFah = Math.trunc(
-            (day.main.temp_max - 273.15) * 1.8 + 32
-          );
-          const tempMinFah = Math.trunc(
-            (day.main.temp_min - 273.15) * 1.8 + 32
-          );
 
           return (
             <div
               key={index}
-              className="flex group flex-col bg-white p-2 rounded-2xl min-w-44 text-base justify-center items-center shadow-lg hover:shadow-2xl"
+              className="flex group flex-col bg-white p-2 rounded-2xl lg:max-w-[174px] w-full text-base justify-center items-center shadow-lg hover:shadow-2xl"
             >
               <div>
                 <p>

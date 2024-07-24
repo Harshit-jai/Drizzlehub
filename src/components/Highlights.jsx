@@ -56,10 +56,10 @@ const Highlights = () => {
   const visibility = weatherData.visibility / 1000;
 
   return (
-    <div className="h-full">
+    <div className="h-full mt-0 lg:mt-16 xl:mt-10 2xl:mt-0 ">
       <h1 className="text-3xl font-semibold mb-5">Today's Highlights</h1>
 
-      <div className="grid grid-cols-4 grid-rows-2 gap-4 h-80">
+      <div className="flex flex-col xl:grid grid-cols-4 grid-rows-2 gap-4 lg:h-80 overflow-y-auto ">
         <div className="bg-white rounded-3xl p-2 flex flex-col items-center shadow-lg hover:shadow-2xl">
           <h1 className="text-lg text-gray-500 font-normal">
             Sunrise/Sunset
@@ -95,7 +95,7 @@ const Highlights = () => {
               <FaTemperatureLow className="text-blue-400 text-6xl" />{" "}
             </p>
           </div>
-          <div className="flex w-full justify-evenly text-2xl">
+          <div className="flex w-full justify-center gap-x-8 lg:gap-x-0 lg:justify-evenly text-2xl">
             {tempType ? (
               <>
                 <span>{tempMaxCel}°C</span>

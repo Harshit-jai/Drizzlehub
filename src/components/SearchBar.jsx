@@ -4,13 +4,31 @@ import { MdMyLocation } from "react-icons/md";
 import { useWeather } from "../hooks/useWeather";
 
 const SearchBar = () => {
+  const API_KEY = import.meta.env.VITE_API_KEY;
   const [place, setPlace] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
   const { getWeather } = useWeather();
-  const handleClick = () => {
-    if (place.trim()) {
+  const fetchCoordinates = async (place) => {
+    const response = await fetch(
+      `http://api.openweathermap.org/geo/1.0/direct?q=${place}&limit=1&appid=${API_KEY}`
+    );
+    const data = await response.json();
+    return data[0];
+  };
+  const handleClick = async () => {
+    if (place.trim().length < 3) {
+      setErrorMessage("Enter atleast 3 characters.");
+      return;
+    }
+    setErrorMessage("");
+
+    const coordinates = await fetchCoordinates(place);
+
+    if (coordinates) {
       getWeather(place);
       setPlace("");
+    } else {
+      setErrorMessage("Enter a valid place");
     }
   };
 
@@ -48,20 +66,19 @@ const SearchBar = () => {
   };
 
   useEffect(() => {
-    if(errorMessage)
-    {
+    if (errorMessage) {
       const timer = setTimeout(() => {
         setErrorMessage("");
       }, 5000);
       return () => clearTimeout(timer);
     }
-  },[errorMessage])
+  }, [errorMessage]);
 
   return (
     <div className="flex flex-col">
       <div className="flex items-center gap-1">
         <input
-          className=" w-48 rounded-full pt-1 px-4 border-2 border-black text-xl placeholder:text-gray-600"
+          className=" w-full rounded-full pt-1 px-4 border-2 border-black text-xl placeholder:text-gray-600"
           placeholder="Search for places..."
           type="text"
           value={place}

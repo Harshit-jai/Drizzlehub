@@ -14,7 +14,7 @@ const Highlights = () => {
   const fetchTimeZone = async (latitude, longitude) => {
     const API = import.meta.env.VITE_ZONE_KEY;
     const response = await fetch(
-      `http://api.timezonedb.com/v2.1/get-time-zone?key=${API}&format=json&by=position&lat=${latitude}&lng=${longitude}`
+      `https://api.timezonedb.com/v2.1/get-time-zone?key=${API}&format=json&by=position&lat=${latitude}&lng=${longitude}`
     );
     const data = await response.json();
     return data.zoneName;

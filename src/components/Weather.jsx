@@ -22,14 +22,14 @@ const Weather = () => {
 
   return (
     <div className="flex flex-col ">
-      <img src={iconUrl} alt={weather.description} className="w-48 dark:bg-white dark:bg-opacity-40 rounded-xl" />
+      <img src={iconUrl} alt={weather.description} className="w-48 dark:bg-white dark:bg-opacity-70 rounded-xl" />
       <h1 className="text-7xl">{tempType ? `${tempCel}°C` : `${tempFah}°F`}</h1>
       <p className="text-2xl font-semibold">
         Feels Like: {tempType ? `${tempFeelCel}°C` : `${tempFeelFah}°F`}
       </p>
       <div className="flex items-center text-2xl font-semibold gap-x-2">
         <p>{weather.description}</p>
-        <img src={iconUrl} alt={weather.description} className="w-8 dark:bg-white dark:bg-opacity-40 rounded-md" />
+        <img src={iconUrl} alt={weather.description} className="w-8 dark:bg-white dark:bg-opacity-70 rounded-md" />
       </div>
       <p className="text-2xl font-semibold mb-6 dark:text-white">Clouds: {clouds}%</p>
       <p className="text-xl">

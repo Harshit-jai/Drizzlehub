@@ -11,6 +11,10 @@ import { IoMdEye } from "react-icons/io";
 import Aqi from "./Aqi";
 import Map from "./Map";
 const Highlights = () => {
+  
+  const { weatherData, airQuality, tempType } = useWeather();
+  const [timeZone, setTimeZone] = useState(null);
+  
   const fetchTimeZone = async (latitude, longitude) => {
     const API = import.meta.env.VITE_ZONE_KEY;
     const response = await fetch(
@@ -20,8 +24,6 @@ const Highlights = () => {
     return data.zoneName;
   };
 
-  const { weatherData, airQuality, tempType } = useWeather();
-  const [timeZone, setTimeZone] = useState(null);
 
   useEffect(() => {
     const getTimeZone = async () => {

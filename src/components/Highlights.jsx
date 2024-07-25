@@ -14,7 +14,7 @@ const Highlights = () => {
   
   const { weatherData, airQuality, tempType } = useWeather();
   const [timeZone, setTimeZone] = useState(null);
-  
+
   const fetchTimeZone = async (latitude, longitude) => {
     const API = import.meta.env.VITE_ZONE_KEY;
     const response = await fetch(
@@ -59,7 +59,7 @@ const Highlights = () => {
 
   return (
     <div className="h-full mt-0 lg:mt-16 xl:mt-10 2xl:mt-0 ">
-      <h1 className="text-3xl font-semibold mb-5">Today's Highlights</h1>
+      <h1 className="text-3xl font-semibold mb-5">Current Weather</h1>
 
       <div className="flex flex-col xl:grid grid-cols-4 grid-rows-2 gap-4 lg:h-80 overflow-y-auto ">
         <div className="bg-white dark:bg-slate-900 rounded-3xl p-2 flex flex-col items-center shadow-lg hover:shadow-2xl">

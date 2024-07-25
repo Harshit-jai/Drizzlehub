@@ -17,7 +17,7 @@ const Forecast = () => {
 
   return (
     <div>
-      <div className="flex justify-between mb-3">
+      <div className="flex justify-between items-center mb-3">
         <h1 className="text-2xl lg:text-3xl w-2/6 lg:w-1/6 font-semibold">
           Forecast
         </h1>

@@ -69,15 +69,15 @@ const App = () => {
         </div>
         {modalOpen && (
           <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 px-4">
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h2 className="text-3xl mb-2">Enter a location:</h2>
+            <div className="bg-white dark:bg-slate-700 p-6 rounded-lg shadow-lg">
+              <h2 className="text-3xl mb-2 dark:text-white">Enter a location:</h2>
               <input
                 type="text"
                 value={input}
                 minLength={3}
                 onChange={(e) => setInput(e.target.value)}
                 onKeyDown={handleKeyPress}
-                className="border p-2 w-full mb-2 text-xl placeholder:text-xl"
+                className="border p-2 w-full mb-2 text-xl rounded-md outline-none placeholder:text-xl"
                 placeholder="Type a city..."
               />
               <button

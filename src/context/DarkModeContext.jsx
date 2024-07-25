@@ -18,6 +18,12 @@ export const DarkModeContextProvider = ({ children }) => {
     setDarkMode((prev) => !prev);
   };
 
+  useEffect(() => {
+    const prefersDark = window.matchMedia(
+      "(prefers-color-scheme: dark)"
+    ).matches;
+    setDarkMode(prefersDark);
+  }, []);
   return (
     <DarkModeContext.Provider value={{ darkMode, toggleMode }}>
       {children}

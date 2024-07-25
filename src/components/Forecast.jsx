@@ -53,7 +53,7 @@ const Forecast = () => {
             className={`${
               tempType
                 ? `${
-                    darkMode ? "bg-gray-800 text-white" : "bg-black text-white"
+                    darkMode ? "bg-gray-900 text-white" : "bg-black text-white"
                   }`
                 : `${darkMode ? "bg-gray-200 text-black" : "bg-white"}`
             } h-10 rounded-full px-3 py-2 hover:cursor-pointer`}
@@ -65,7 +65,7 @@ const Forecast = () => {
             className={`${
               !tempType
                 ? `${
-                    darkMode ? "bg-gray-800 text-white" : "bg-black text-white"
+                    darkMode ? "bg-gray-900 text-white" : "bg-black text-white"
                   }`
                 : `${darkMode ? "bg-gray-200 text-black" : "bg-white"}`
             } h-10 rounded-full px-3.5 py-2 hover:cursor-pointer`}

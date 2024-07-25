@@ -17,7 +17,7 @@ const SocialLinks = () => {
   return (
     <div className={`${darkMode && "dark"} border-t pt-1 border-black dark:border-white`}>
       <p className="text-xl dark:text-white">Connect with me on:</p>
-      <div className="flex justify-between">
+      <div className="flex justify-between items-center">
         <div className="flex gap-x-6 text-4xl">
           <IoLogoLinkedin
             onClick={() => handleClick(linkedinUrl)}
@@ -32,7 +32,7 @@ const SocialLinks = () => {
             className="hover:cursor-pointer transition transform ease-in-out duration-300 hover:scale-105"
           />
         </div>
-        <div className="text-2xl bg-black text-white dark:bg-white dark:text-black rounded-full p-1" onClick={toggleMode}>
+        <div className="text-2xl bg-black text-white dark:bg-white dark:text-black rounded-md p-1  cursor-pointer" onClick={toggleMode}>
           {darkMode ? <MdOutlineLightMode /> : <MdDarkMode />}
         </div>
       </div>

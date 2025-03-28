@@ -46,7 +46,7 @@ To run this project locally, follow these steps:
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/Drizzlehub.git
+git clone https://github.com/Harshit-jai/Drizzlehub.git
 
 # Navigate to the project directory
 cd Drizzlehub
